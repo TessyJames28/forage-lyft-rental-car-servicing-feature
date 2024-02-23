@@ -13,4 +13,4 @@ class SpindlerBattery(Battery):
     def needs_service(self):
         service_interval = timedelta(days=365 * 2)
         last_serviced = self.current_date - self.last_service_date
-        return last_serviced >= service_interval
+        return last_serviced > service_interval
