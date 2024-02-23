@@ -9,6 +9,6 @@ class CapuletEngine(Engine):
         self.current_mileage = current_mileage
         
         
-    def needs_servicing(self):
+    def needs_service(self):
         milleage = self.current_mileage - self.last_service_mileage
-        return milleage >= 30000
+        return milleage > 30000
